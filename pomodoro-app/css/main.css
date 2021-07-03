@@ -1,0 +1,52 @@
+body {
+	padding: 20px;
+	margin: 0px;
+	background: rgb(219, 82, 77);
+}
+
+.app-header {
+	width: 50%;
+	padding-bottom: 30px;
+	margin: auto;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.app-logo {
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.app-logo__image {
+	width: 20px; 
+	vertical-align: middle;
+}
+
+.app-logo__text {
+	vertical-align: middle;
+}
+
+.navbar {
+	float: right;
+}
+
+.navbar-button {
+	padding: 10px;
+	background-color: rgba(255, 255, 255, 0.2);
+	border: none;
+	color: white;
+}
+
+.navbar-button:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+	cursor: pointer;
+}
+
+.navbar-button__icon {
+	width: 16px;
+	vertical-align: middle;
+}
+
+.navbar-button__text {
+	vertical-align: middle;
+}
