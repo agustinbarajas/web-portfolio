@@ -4,8 +4,12 @@ body {
 	background: rgb(219, 82, 77);
 }
 
+ul {
+	margin: 0px;
+}
+
 .app-header {
-	width: 50%;
+	width: 45%;
 	padding-bottom: 30px;
 	margin: auto;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -35,6 +39,7 @@ body {
 	background-color: rgba(255, 255, 255, 0.2);
 	border: none;
 	color: white;
+	border-radius: 4px;
 }
 
 .navbar-button:hover {
@@ -49,4 +54,61 @@ body {
 
 .navbar-button__text {
 	vertical-align: middle;
+}
+
+.timer {
+	background-color: rgba(255, 255, 255, 0.1);
+	width: 32%;
+	padding: 26px 16px;
+	margin: auto;
+	margin-top: 45px;
+	border-radius: 4px;
+}
+
+.timer-navbar {
+	text-align: center;
+}
+
+.timer-navbar__button {
+	display: inline-block;
+	background: transparent;
+	padding: 4px 8px;
+	border: none;
+	color: white;
+	border-radius: 4px;
+	font-size: 16px;
+}
+
+.timer-navbar__button--active {
+	background: rgba(0, 0, 0, 0.15);
+}
+
+.timer-navbar__button:hover {
+	cursor: pointer;
+}
+
+.timer-content {
+	text-align: center;
+	margin: 10px 0px;
+}
+
+.timer-content__item {
+	font-size: 8rem;
+	color: white;
+	font-weight: bold;
+}
+
+.timer-footer {
+	text-align: center;
+}
+
+.timer-footer__button {
+	width: 200px;
+	padding: 16px;
+	color: rgb(219, 82, 77);
+	font-size: 20px;
+	font-weight: bold;
+	border: none;
+	border-radius: 4px;
+	box-shadow: 0px 5px rgba(235, 235, 235, 0.8);
 }
