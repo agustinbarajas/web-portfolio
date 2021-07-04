@@ -1,7 +1,14 @@
+:root {
+	--background-color: rgb(219, 82, 77);
+	--foreground-color: white;
+	font-size: 16px;
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
 body {
 	padding: 20px;
 	margin: 0px;
-	background: rgb(219, 82, 77);
+	background: var(--background-color);
 }
 
 ul {
@@ -17,17 +24,23 @@ ul {
 }
 
 .app-logo {
-	color: white;
-	font-size: 20px;
+	color: var(--foreground-color);
+	font-size: 1.25rem;
 	font-weight: bold;
+	text-decoration: none;
+}
+
+.app-logo:hover {
+	cursor: pointer;
 }
 
 .app-logo__image {
-	width: 20px; 
+	width: 1.25rem; 
 	vertical-align: middle;
 }
 
 .app-logo__text {
+	font-size: 1.25rem;
 	vertical-align: middle;
 }
 
@@ -39,7 +52,7 @@ ul {
 	padding: 10px;
 	background-color: rgba(255, 255, 255, 0.2);
 	border: none;
-	color: white;
+	color: var(--foreground-color);
 	border-radius: 4px;
 }
 
@@ -49,11 +62,12 @@ ul {
 }
 
 .navbar-button__icon {
-	width: 16px;
+	width: 1rem;
 	vertical-align: middle;
 }
 
 .navbar-button__text {
+	font-size: 0.75rem;
 	vertical-align: middle;
 }
 
@@ -75,9 +89,9 @@ ul {
 	background: transparent;
 	padding: 4px 8px;
 	border: none;
-	color: white;
+	color: var(--foreground-color);
 	border-radius: 4px;
-	font-size: 16px;
+	font-size: 1rem;
 }
 
 .timer-navbar__button--active {
@@ -95,7 +109,7 @@ ul {
 
 .timer-content__item {
 	font-size: 8rem;
-	color: white;
+	color: var(--foreground-color);
 	font-weight: bold;
 }
 
@@ -106,12 +120,16 @@ ul {
 .timer-footer__button {
 	width: 200px;
 	padding: 16px;
-	color: rgb(219, 82, 77);
-	font-size: 20px;
+	color:  var(--background-color);
+	font-size: 1.25rem;
 	font-weight: bold;
 	border: none;
 	border-radius: 4px;
 	box-shadow: 0px 5px rgba(235, 235, 235, 0.8);
+}
+
+.timer-footer__button:hover {
+	cursor: pointer;
 }
 
 .tasks {
@@ -127,8 +145,8 @@ ul {
 }
 
 .tasks-header__title {
-	color: white;
-	font-size: 18px;
+	color: var(--foreground-color);
+	font-size: 1.125rem;
 }
 
 .tasks-content {
@@ -138,8 +156,8 @@ ul {
 }
 
 .tasks-content__title {
-	color: white;
-	font-size: 18px;
+	color: var(--foreground-color);
+	font-size: 1.125rem;
 }
 
 .tasks-content-button {
@@ -150,9 +168,13 @@ ul {
 	border-radius: 4px;
 }
 
-.tasks-content-button__image {
-	width: 16px;
-	height: 13px;
+.tasks-content-button:hover {
+	cursor: pointer;
+}
+
+.tasks-content-button__icon {
+	width: 1rem;
+	height: 0.8125rem;
 }
 
 .tasks-footer {
@@ -165,7 +187,7 @@ ul {
 	text-align: center;
 	background-color: rgba(0, 0, 0, 0.1);
 	border-radius: 8px;
-	border: 2px dashed white;
+	border: 2px dashed var(--foreground-color);
 	opacity: 0.8;
 }
 
@@ -174,15 +196,15 @@ ul {
 	cursor: pointer;
 }
 
-.tasks-footer-button__image {
-	width: 18px;
-	height: 18px;
+.tasks-footer-button__icon {
+	width: 1.125rem;
+	height: 1.125rem;
 	margin-right: 8px;
 	vertical-align: middle;
 }
 
-.tasks-footer-button__title {
-	color: white;
-	font-size: 18px;
+.tasks-footer-button__text {
+	color: var(--foreground-color);
+	font-size: 1.125rem;
 	vertical-align: middle;
 }
