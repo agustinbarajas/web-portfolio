@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Pomodoro timer</title>
 		<link rel="stylesheet" href="./css/main.css">
+		<link rel="stylesheet" href="./css/modal.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap"> 
 	</head>
 	<body>
@@ -14,7 +15,7 @@
 				<span class="app-logo__text">Pomofocus</span>
 			</a>
 			<nav class="navbar">
-				<button class="navbar-button">
+				<button id="report-button" class="navbar-button">
 					<img class="navbar-button__icon" src="./assets/images/graph-white.png" alt="Graph icon">
 					<span class="navbar-button__text">Report</span>
 				</button>
@@ -70,7 +71,15 @@
 				</footer>
 			</section>
 		</main>
-		<footer>
-		</footer>
+
+		<template id="report-modal">
+			<div class="modal-wrapper">
+				<div class="modal">
+					<button class="tab">Personal Report</button>
+					<button class="tab">Ranking</button>
+				</div>
+			</div>
+		</template>
+		<script src="./javascript/index.js"></script>
 	</body>
 </html>
