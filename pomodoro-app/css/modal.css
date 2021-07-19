@@ -9,16 +9,52 @@
 }
 
 .modal {
+	position: relative;
 	background-color: white;
 	width: 600px;
-	padding: 20px;
+	padding: 70px 20px 20px 20px;
 	margin: auto;
 	margin-top: 65px;
 	border-radius: 5px;
 }
 
-.tab {
-	width: 49%;
-	border-color: orange;
-	border-radius: 5px;
+.modal-close {
+	position: absolute;
+	top: 8px;
+	right: 20px;
+	font-size: 2rem;
+	font-weight: bold;
+	color: black;
+	opacity: 0.3;
+}
+
+.modal-close:hover {
+	cursor: pointer;
+}
+
+.modal-header {
+	font-size: 0rem;
+}
+
+.modal-header__tab {
+	display: inline-block;
+	width: 49.5%;
+	border: 1px solid var(--background-color-opaque);
+	background-color: var(--background-color-opaque);
+	border-radius: 5px 0px 0px 5px;
+	color: var(--foreground-color);
+	padding: 8px 0px;
+	font-size: 1rem;
+	text-align: center;
+	font-weight: bold;
+}
+
+.modal-header__tab:hover {
+	cursor: pointer;
+}
+
+.modal-header__tab:last-child {
+	background-color: var(--foreground-color);
+	color: var(--background-color-opaque);
+	border-radius: 0px 5px 5px 0px;
 }

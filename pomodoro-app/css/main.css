@@ -1,5 +1,6 @@
 :root {
 	--background-color: rgb(219, 82, 77);
+	--background-color-opaque: rgba(219, 82, 77, 0.5);
 	--foreground-color: white;
 	font-size: 16px;
 	font-family: 'M PLUS Rounded 1c', sans-serif;
