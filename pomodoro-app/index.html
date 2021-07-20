@@ -76,11 +76,37 @@
 			<div class="modal-wrapper">
 				<div class="modal">
 					<span class="modal-close">&times;</span>
-					<header class="modal-header">
-						<a class="modal-header__tab">Personal Report</a>
-						<a class="modal-header__tab">Ranking</a>
+					<header class="report-header">
+						<a class="report-header__tab">Personal Report</a>
+						<a class="report-header__tab">Ranking</a>
 					</header>
-					<div></div>
+					<div class="report-content">
+						<h3 class="report-title">Activity summary</h3>
+						<label class="report-warning">* This report will be available when you are logged in</label>
+						<div class="report-cards">
+							<div class="report-cards__element">
+								<div class="report-cards-header">
+									<img class="report-cards-header__icon" src="assets/images/clock-red.png" alt="Hours focused icon">
+									<label class="report-cards-header__score">--</label>
+								</div>
+								<label class="report-cards-footer">hours focused</label>
+							</div>
+							<div class="report-cards__element">
+								<div class="report-cards-header">
+									<img class="report-cards-header__icon" src="assets/images/calendar-red.png" alt="Days accessed icon">
+									<label class="report-cards-header__score">--</label>
+								</div>
+								<label class="report-cards-footer">days accessed</label>
+							</div>
+							<div class="report-cards__element">
+								<div class="report-cards-header">
+									<img class="report-cards-header__icon" src="assets/images/flame-red.png" alt="Days streak icon">
+									<label class="report-cards-header__score">--</label>
+								</div>
+								<label class="report-cards-footer">day streak</label>
+							</div>
+						</div>
+					</div>
 					<footer></footer>
 				</div>
 			</div>

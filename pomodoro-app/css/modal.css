@@ -12,7 +12,7 @@
 	position: relative;
 	background-color: white;
 	width: 600px;
-	padding: 70px 20px 20px 20px;
+	padding: 20px;
 	margin: auto;
 	margin-top: 65px;
 	border-radius: 5px;
@@ -22,7 +22,7 @@
 	position: absolute;
 	top: 8px;
 	right: 20px;
-	font-size: 2rem;
+	font-size: 3.2rem;
 	font-weight: bold;
 	color: black;
 	opacity: 0.3;
@@ -32,29 +32,92 @@
 	cursor: pointer;
 }
 
-.modal-header {
+.report-header {
 	font-size: 0rem;
+	margin: 40px 0;
 }
 
-.modal-header__tab {
+.report-header__tab {
 	display: inline-block;
-	width: 49.5%;
-	border: 1px solid var(--background-color-opaque);
+	width: 49%;
+	border: 2px solid var(--background-color-opaque);
 	background-color: var(--background-color-opaque);
 	border-radius: 5px 0px 0px 5px;
 	color: var(--foreground-color);
 	padding: 8px 0px;
-	font-size: 1rem;
+	font-size: 1.6rem;
 	text-align: center;
 	font-weight: bold;
 }
 
-.modal-header__tab:hover {
+.report-header__tab:hover {
 	cursor: pointer;
 }
 
-.modal-header__tab:last-child {
+.report-header__tab:first-child {
+	border-right: none;
+}
+
+.report-header__tab:last-child {
 	background-color: var(--foreground-color);
 	color: var(--background-color-opaque);
 	border-radius: 0px 5px 5px 0px;
 }
+
+.report-content {}
+
+.report-title {
+	color: black;
+	opacity: 0.6;
+	font-size: 1.8rem;
+}
+
+.report-warning {
+	color: gray;
+	opacity: 0.6;
+	font-size: 1.6rem;
+}
+
+.report-cards {
+	margin-top: 28px;
+	text-align: center;
+}
+
+.report-cards__element {
+	width: 120px;
+	height: 60px;
+	display: inline-block;
+	background-color: var(--background-color-light);
+	padding: 18px 14px;
+	margin: 0 14px 14px 0;
+	border-radius: 8px;
+	text-align: right;
+}
+
+.report-cards__element:last-child {
+	margin-right: 0;
+}
+
+.report-cards-header {
+	margin-bottom: .6rem;
+}
+
+.report-cards-header__icon {
+	width: 2.8rem;
+	height: 2.8rem;
+	opacity: 0.5;
+	float: left;
+}
+
+.report-cards-header__score {
+	font-size: 3rem;
+	font-weight: bold;
+	color: var(--background-color-opaque);
+}
+
+.report-cards-footer {
+	font-size: 1.3rem;
+	font-weight: bold;
+	color: var(--background-color-opaque);
+}
+
