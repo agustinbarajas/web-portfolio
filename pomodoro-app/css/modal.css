@@ -40,10 +40,10 @@
 .report-header__tab {
 	display: inline-block;
 	width: 49%;
-	border: 2px solid var(--background-color-opaque);
-	background-color: var(--background-color-opaque);
+	border: 2px solid var(--primary-color-opaque);
+	background-color: var(--primary-color-opaque);
 	border-radius: 5px 0px 0px 5px;
-	color: var(--foreground-color);
+	color: var(--secondary-color);
 	padding: 8px 0px;
 	font-size: 1.6rem;
 	text-align: center;
@@ -59,8 +59,8 @@
 }
 
 .report-header__tab:last-child {
-	background-color: var(--foreground-color);
-	color: var(--background-color-opaque);
+	background-color: var(--secondary-color);
+	color: var(--primary-color-opaque);
 	border-radius: 0px 5px 5px 0px;
 }
 
@@ -87,7 +87,7 @@
 	width: 120px;
 	height: 60px;
 	display: inline-block;
-	background-color: var(--background-color-light);
+	background-color: var(--primary-color-light);
 	padding: 18px 14px;
 	margin: 0 14px 14px 0;
 	border-radius: 8px;
@@ -112,12 +112,12 @@
 .report-cards-header__score {
 	font-size: 3rem;
 	font-weight: bold;
-	color: var(--background-color-opaque);
+	color: var(--primary-color-opaque);
 }
 
 .report-cards-footer {
 	font-size: 1.3rem;
 	font-weight: bold;
-	color: var(--background-color-opaque);
+	color: var(--primary-color-opaque);
 }
 

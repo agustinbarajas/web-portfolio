@@ -1,8 +1,8 @@
 :root {
-	--background-color: rgb(219, 82, 77);
-	--background-color-opaque: rgba(219, 82, 77, 0.5);
-	--background-color-light: rgb(248, 232, 231);
-	--foreground-color: white;
+	--primary-color: rgb(219, 82, 77);
+	--primary-color-opaque: rgba(219, 82, 77, 0.5);
+	--primary-color-light: rgb(248, 232, 231);
+	--secondary-color: white;
 	font-size: 10px;
 	font-family: 'M PLUS Rounded 1c', sans-serif;
 }
@@ -10,7 +10,7 @@
 body {
 	padding: 20px;
 	margin: 0px;
-	background: var(--background-color);
+	background: var(--primary-color);
 }
 
 ul {
@@ -26,7 +26,7 @@ ul {
 }
 
 .app-logo {
-	color: var(--foreground-color);
+	color: var(--secondary-color);
 	font-size: 2rem;
 	font-weight: bold;
 	text-decoration: none;
@@ -37,7 +37,7 @@ ul {
 }
 
 .app-logo__image {
-	width: 2rem; 
+	width: 2rem;
 	vertical-align: middle;
 }
 
@@ -54,7 +54,7 @@ ul {
 	padding: 10px;
 	background-color: rgba(255, 255, 255, 0.2);
 	border: none;
-	color: var(--foreground-color);
+	color: var(--secondary-color);
 	border-radius: 4px;
 }
 
@@ -91,7 +91,7 @@ ul {
 	background: transparent;
 	padding: 4px 8px;
 	border: none;
-	color: var(--foreground-color);
+	color: var(--secondary-color);
 	border-radius: 4px;
 	font-size: 1.6rem;
 }
@@ -111,7 +111,7 @@ ul {
 
 .timer-content__item {
 	font-size: 12.8rem;
-	color: var(--foreground-color);
+	color: var(--secondary-color);
 	font-weight: bold;
 }
 
@@ -122,7 +122,7 @@ ul {
 .timer-footer__button {
 	width: 200px;
 	padding: 16px;
-	color:  var(--background-color);
+	color:  var(--primary-color);
 	font-size: 2rem;
 	font-weight: bold;
 	border: none;
@@ -147,7 +147,7 @@ ul {
 }
 
 .tasks-header__title {
-	color: var(--foreground-color);
+	color: var(--secondary-color);
 	font-size: 1.8rem;
 }
 
@@ -158,7 +158,7 @@ ul {
 }
 
 .tasks-content__title {
-	color: var(--foreground-color);
+	color: var(--secondary-color);
 	font-size: 1.8rem;
 }
 
@@ -189,7 +189,7 @@ ul {
 	text-align: center;
 	background-color: rgba(0, 0, 0, 0.1);
 	border-radius: 8px;
-	border: 2px dashed var(--foreground-color);
+	border: 2px dashed var(--secondary-color);
 	opacity: 0.8;
 }
 
@@ -206,7 +206,7 @@ ul {
 }
 
 .tasks-footer-button__text {
-	color: var(--foreground-color);
+	color: var(--secondary-color);
 	font-size: 1.8rem;
 	vertical-align: middle;
 }
