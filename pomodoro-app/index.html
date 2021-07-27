@@ -77,11 +77,14 @@
 				<div class="modal">
 					<span class="modal-close">&times;</span>
 					<header class="report-header">
-						<a class="report-header__tab">Personal Report</a>
-						<a class="report-header__tab">Ranking</a>
+						<button class="report-header__tab">Personal Report</button>
+						<button class="report-header__tab">Ranking</button>
 					</header>
 					<div class="report-content">
-						<h3 class="report-title">Activity summary</h3>
+						<div class="report-title">
+							<h3 class="report-title__text">Activity summary</h3>
+							<hr class="report-title__line">
+						</div>
 						<label class="report-warning">* This report will be available when you are logged in</label>
 						<div class="report-cards">
 							<div class="report-cards__element">
@@ -105,6 +108,10 @@
 								</div>
 								<label class="report-cards-footer">day streak</label>
 							</div>
+						</div>
+						<div class="report-title">
+							<h3 class="report-title__text">Focus hours</h3>
+							<hr class="report-title__line">
 						</div>
 					</div>
 					<footer></footer>
