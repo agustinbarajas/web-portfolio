@@ -133,3 +133,41 @@
 	color: var(--primary-color-opaque);
 }
 
+.report-focus {
+	margin-bottom: 1.2rem;
+}
+
+.report-focus-project {
+	border-bottom: 1px solid gray;
+	opacity: 0.4;
+	padding-bottom: 8px;
+}
+
+.report-focus-project__subtitle {
+	font-size: 1.2rem;
+    opacity: 0.6;
+}
+
+.report-focus-project__text {
+	font-size: 1.2rem;
+    opacity: 0.6;
+	float: right;
+}
+
+.report-focus__total {
+	border-bottom: 1px solid gray;
+	opacity: 0.4;
+	padding: 12px 0;
+}
+
+.report-focus-total__subtitle {
+	font-size: 1.8rem;
+	opacity: 0.6;
+}
+
+.report-focus-total__text {
+	font-size: 2rem;
+	opacity: 0.6;
+	font-weight: bold;
+	float: right;
+}
