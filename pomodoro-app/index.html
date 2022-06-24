@@ -77,54 +77,64 @@
 				<div class="modal">
 					<span class="modal-close">&times;</span>
 					<header class="report-header">
-						<button class="report-header__tab tab__active">Summary</button>
-						<button class="report-header__tab">Ranking</button>
+						<button class="report-header__tab tab__active" data-template="report-summary">Summary</button>
+						<button class="report-header__tab" data-template="report-ranking">Ranking</button>
 					</header>
-					<div class="report-content">
-						<div class="report-title">
-							<h3 class="report-title__text">Activity summary</h3>
-							<hr class="report-title__line">
+					<div class="report-body"></div>
+				</div>
+			</div>
+		</template>
+
+		<template id="report-summary">
+			<div class="report-content">
+				<div class="report-title">
+					<h3 class="report-title__text">Activity summary</h3>
+					<hr class="report-title__line">
+				</div>
+				<label class="report-warning">* This report will be available when you are logged in</label>
+				<div class="report-cards">
+					<div class="report-cards__element">
+						<div class="report-cards-header">
+							<img class="report-cards-header__icon" src="assets/images/clock-red.png" alt="Hours focused icon">
+							<label class="report-cards-header__score">--</label>
 						</div>
-						<label class="report-warning">* This report will be available when you are logged in</label>
-						<div class="report-cards">
-							<div class="report-cards__element">
-								<div class="report-cards-header">
-									<img class="report-cards-header__icon" src="assets/images/clock-red.png" alt="Hours focused icon">
-									<label class="report-cards-header__score">--</label>
-								</div>
-								<label class="report-cards-footer">hours focused</label>
-							</div>
-							<div class="report-cards__element">
-								<div class="report-cards-header">
-									<img class="report-cards-header__icon" src="assets/images/calendar-red.png" alt="Days accessed icon">
-									<label class="report-cards-header__score">--</label>
-								</div>
-								<label class="report-cards-footer">days accessed</label>
-							</div>
-							<div class="report-cards__element">
-								<div class="report-cards-header">
-									<img class="report-cards-header__icon" src="assets/images/flame-red.png" alt="Days streak icon">
-									<label class="report-cards-header__score">--</label>
-								</div>
-								<label class="report-cards-footer">day streak</label>
-							</div>
+						<label class="report-cards-footer">hours focused</label>
+					</div>
+					<div class="report-cards__element">
+						<div class="report-cards-header">
+							<img class="report-cards-header__icon" src="assets/images/calendar-red.png" alt="Days accessed icon">
+							<label class="report-cards-header__score">--</label>
 						</div>
-						<div class="report-title">
-							<h3 class="report-title__text">Focus hours</h3>
-							<hr class="report-title__line">
+						<label class="report-cards-footer">days accessed</label>
+					</div>
+					<div class="report-cards__element">
+						<div class="report-cards-header">
+							<img class="report-cards-header__icon" src="assets/images/flame-red.png" alt="Days streak icon">
+							<label class="report-cards-header__score">--</label>
 						</div>
-						<div class="report-focus">
-							<div class="report-focus-project">
-								<label class="report-focus-project__subtitle">PROJECT</label>
-								<label class="report-focus-project__text">TIME(HH:MM)</label>
-							</div>
-							<div class="report-focus__total">
-								<label class="report-focus-total__subtitle">Total</label>
-								<label class="report-focus-total__text">00:00</label>
-							</div>
-						</div>
+						<label class="report-cards-footer">day streak</label>
 					</div>
 				</div>
+				<div class="report-title">
+					<h3 class="report-title__text">Focus hours</h3>
+					<hr class="report-title__line">
+				</div>
+				<div class="report-focus">
+					<div class="report-focus-project">
+						<label class="report-focus-project__subtitle">PROJECT</label>
+						<label class="report-focus-project__text">TIME(HH:MM)</label>
+					</div>
+					<div class="report-focus__total">
+						<label class="report-focus-total__subtitle">Total</label>
+						<label class="report-focus-total__text">00:00</label>
+					</div>
+				</div>
+			</div>
+		</template>
+
+		<template id="report-ranking">
+			<div class="report-content">
+				<span>This is a report-ranking body</span>
 			</div>
 		</template>
 		<script src="./javascript/index.js"></script>
