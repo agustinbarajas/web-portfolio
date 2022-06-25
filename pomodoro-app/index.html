@@ -119,10 +119,10 @@
 					<h3 class="report-title__text">Focus hours</h3>
 					<hr class="report-title__line">
 				</div>
-				<div class="report-focus">
-					<div class="report-focus-project">
-						<label class="report-focus-project__subtitle">PROJECT</label>
-						<label class="report-focus-project__text">TIME(HH:MM)</label>
+				<div class="report-section">
+					<div class="report-section-header">
+						<label class="report-section-header__subtitle">PROJECT</label>
+						<label class="report-section-header__text">TIME(HH:MM)</label>
 					</div>
 					<div class="report-focus__total">
 						<label class="report-focus-total__subtitle">Total</label>
@@ -134,7 +134,24 @@
 
 		<template id="report-ranking">
 			<div class="report-content">
-				<span>This is a report-ranking body</span>
+				<div class="report-title">
+					<h3 class="report-title__text">Focus time this week</h3>
+					<hr class="report-title__line">
+				</div>
+				<div class="report-section">
+					<div class="report-section-header">
+						<label class="report-section-header__subtitle">USER</label>
+						<label class="report-section-header__text">TIME(HH:MM)</label>
+					</div>
+          <div class="report-section-body">
+            <div class="report-user">
+              <label class="report-user-position">1</label>
+              <img class="report-user-image" src="https://i.picsum.photos/id/787/200/300.jpg?hmac=XItcL1ki66gQzP2FwRZjLbruiohUmaOYs9mmlDZe9KE"/>
+              <label class="report-user-name">Juanito</label>
+              <label class="report-user-time">100:20</label>
+            </div>
+          </div>
+				</div>
 			</div>
 		</template>
 		<script src="./javascript/index.js"></script>

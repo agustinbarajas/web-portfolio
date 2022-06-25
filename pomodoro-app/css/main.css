@@ -3,6 +3,7 @@
 	--primary-color-opaque: rgba(219, 82, 77, 0.5);
 	--primary-color-light: rgb(248, 232, 231);
 	--secondary-color: white;
+  --gray-color-opaque: rgba(128, 128, 128, 0.4);
 	font-size: 10px;
 	font-family: 'M PLUS Rounded 1c', sans-serif;
 }

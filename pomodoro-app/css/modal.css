@@ -141,22 +141,22 @@
 	color: var(--primary-color-opaque);
 }
 
-.report-focus {
+.report-section {
 	margin-bottom: 1.2rem;
 }
 
-.report-focus-project {
+.report-section-header {
 	border-bottom: 1px solid gray;
 	opacity: 0.4;
 	padding-bottom: 8px;
 }
 
-.report-focus-project__subtitle {
+.report-section-header__subtitle {
 	font-size: 1.2rem;
     opacity: 0.6;
 }
 
-.report-focus-project__text {
+.report-section-header__text {
 	font-size: 1.2rem;
     opacity: 0.6;
 	float: right;
@@ -178,4 +178,45 @@
 	opacity: 0.6;
 	font-weight: bold;
 	float: right;
+}
+
+.report-section-body {}
+
+.report-user {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--gray-color-opaque);
+}
+
+.report-user-position {
+  display: inline-block;
+  vertical-align: middle;
+  width: 10%;
+  text-align: center;
+  font-size: 3rem;
+  color: gray;
+}
+
+.report-user-image {
+  display: inline-block;
+  vertical-align: middle;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+.report-user-name {
+  display: inline-block;
+  vertical-align: middle;
+  width: 60%;
+  margin-left: 1rem;
+  font-size: 2rem;
+}
+
+.report-user-time {
+  display: inline-block;
+  vertical-align: middle;
+  width: 18%;
+  text-align: right;
+  font-size: 2rem;
+  font-weight: bold;
 }
