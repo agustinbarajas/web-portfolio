@@ -17,7 +17,7 @@ const handleModal = evt => {
 		document.body.removeChild(document.body.lastElementChild)
 	};
 
-	const handleModalTab = evt => {
+	const handleModalTab = async (evt) => {
 		evt.preventDefault();
 		document.querySelector('.report-header__tab.tab__active')
 			.classList.remove('tab__active');
@@ -28,6 +28,13 @@ const handleModal = evt => {
 		if (oldTemplate) {
 			modalBody.replaceChild(newTemplate.content.cloneNode(true), oldTemplate);
 		}
+
+		const reportRankingBody = document.querySelector('#report-ranking-body');
+		if (reportRankingBody) {
+			const { data: { users } } = await get('assets/data/users.json');
+			const usersHtml = users.map(buildReportUserCard).join('');
+			reportRankingBody.innerHTML = usersHtml;
+		}
 	};
 
 	closeModal.addEventListener('click', handleCloseModal);
@@ -35,3 +42,23 @@ const handleModal = evt => {
 }
 
 reportButton.addEventListener('click', handleModal);
+
+function buildReportUserCard(user) {
+	return (`
+		<div class="report-user">
+			<label class="report-user-position">${user.position}</label>
+			<img class="report-user-image" src="${user.profile_picture}" />
+			<label class="report-user-name">${user.name}</label>
+			<label class="report-user-time">${parseTime(user.time)}</label>
+		</div>
+	`);
+}
+
+function parseTime(time) {
+	const hours = (time / MINUTES_PER_HOUR).toFixed(0);
+	const minutes = (time % MINUTES_PER_HOUR)
+		.toString()
+		.padStart(MAX_MINUTES_DIGITS, '0');
+
+	return `${hours}:${minutes}`;
+}
