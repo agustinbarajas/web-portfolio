@@ -5,6 +5,7 @@ const summaryTemplate = document.querySelector('#report-summary');
 const handleModal = evt => {
 	evt.preventDefault();
 	document.body.appendChild(reportModal.content.cloneNode(true));
+	document.body.classList.add('overflow-hidden');
 
 	const closeModal = document.querySelector('.modal-close');
 	const modalBody = document.querySelector('.report-body');
@@ -15,6 +16,7 @@ const handleModal = evt => {
 	const handleCloseModal = evt => {
 		evt.preventDefault();
 		document.body.removeChild(document.body.lastElementChild)
+		document.body.classList.remove('overflow-hidden');
 	};
 
 	const handleModalTab = async (evt) => {

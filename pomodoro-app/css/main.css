@@ -211,3 +211,7 @@ ul {
 	font-size: 1.8rem;
 	vertical-align: middle;
 }
+
+.overflow-hidden {
+	overflow-y: hidden;
+}
