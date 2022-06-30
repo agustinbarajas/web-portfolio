@@ -2,27 +2,32 @@
   "data": {
     "users": [
       {
-        "username": "Jósef Wirnhier",
+        "position": 1,
+        "name": "Jósef Wirnhier",
         "time": 5900,
         "profile_picture": "https://i.picsum.photos/id/787/200/300.jpg?hmac=XItcL1ki66gQzP2FwRZjLbruiohUmaOYs9mmlDZe9KE"
       },
       {
-        "username": "Jóna Haynes",
+        "position": 2,
+        "name": "Jóna Haynes",
         "time": 6800,
         "profile_picture": "https://i.picsum.photos/id/524/200/300.jpg?hmac=_0B_jkz8dRd5eIQz0xIlicLaZZnzpRdAH72crtCVvOU"
       },
       {
-        "username": "Nisha Vivas",
+        "position": 3,
+        "name": "Nisha Vivas",
         "time": 1200,
         "profile_picture": "https://i.picsum.photos/id/641/200/300.jpg?hmac=TpiMIigzR3rlnmP84Df902LYzuV4pApn7Tq6lCYic0A"
       },
       {
-        "username": "Inga Fortunato",
+        "position": 4,
+        "name": "Inga Fortunato",
         "time": 4320,
         "profile_picture": "https://i.picsum.photos/id/405/200/300.jpg?hmac=f-f0GKz4x3t4FLNM9cdniTfIv8KFbABBlSpzEkkoJ6g"
       },
       {
-        "username": "Honoria Auer",
+        "position": 5,
+        "name": "Honoria Auer",
         "time": 7200,
         "profile_picture": "https://i.picsum.photos/id/488/200/300.jpg?hmac=0juhK9GVPUpSjHaRjdjZO5Fw2bcfSYHNjXLYTg3ZsQU"
       }
