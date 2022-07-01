@@ -1,4 +1,5 @@
 :root {
+  --modal-width: 60rem;
 	--primary-color: rgb(219, 82, 77);
 	--primary-color-opaque: rgba(219, 82, 77, 0.5);
 	--primary-color-light: rgb(248, 232, 231);
