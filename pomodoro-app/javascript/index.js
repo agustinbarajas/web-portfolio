@@ -1,17 +1,21 @@
-const reportModal = document.querySelector('#report-modal');
+const modalTemplate = document.querySelector('#modal-template');
 const reportButton = document.getElementById('report-button');
-const summaryTemplate = document.querySelector('#report-summary');
+const reportSummaryTemplate = document.querySelector('#report-summary-template');
+const reportHeaderTemplate = document.querySelector('#report-header-template');
 
 const handleModal = evt => {
 	evt.preventDefault();
-	document.body.appendChild(reportModal.content.cloneNode(true));
+	document.body.appendChild(modalTemplate.content.cloneNode(true));
 	document.body.classList.add('overflow-hidden');
 
 	const closeModal = document.querySelector('.modal-close');
-	const modalBody = document.querySelector('.report-body');
-	const reportModalTabButton = document.querySelectorAll('.report-header__tab');
+	const modalBody = document.querySelector('.modal-body');
+	const modalHeader = document.querySelector('.modal-header');
 
-	modalBody.appendChild(summaryTemplate.content.cloneNode(true));
+	modalBody.appendChild(reportSummaryTemplate.content.cloneNode(true));
+	modalHeader.appendChild(reportHeaderTemplate.content.cloneNode(true));
+
+  const modalTabButton = document.querySelectorAll('.report-header__tab');
 
 	const handleCloseModal = evt => {
 		evt.preventDefault();
@@ -40,7 +44,7 @@ const handleModal = evt => {
 	};
 
 	closeModal.addEventListener('click', handleCloseModal);
-	reportModalTabButton.forEach(element => element.addEventListener('click', handleModalTab));
+	modalTabButton.forEach(element => element.addEventListener('click', handleModalTab));
 }
 
 reportButton.addEventListener('click', handleModal);

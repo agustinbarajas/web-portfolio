@@ -72,20 +72,22 @@
 			</section>
 		</main>
 
-		<template id="report-modal">
+		<template id="modal-template">
 			<div class="modal-wrapper">
 				<div class="modal">
 					<span class="modal-close">&times;</span>
-					<header class="report-header">
-						<button class="report-header__tab tab__active" data-template="report-summary">Summary</button>
-						<button class="report-header__tab" data-template="report-ranking">Ranking</button>
-					</header>
-					<div class="report-body"></div>
+					<header class="modal-header"></header>
+					<div class="modal-body"></div>
 				</div>
 			</div>
 		</template>
 
-		<template id="report-summary">
+		<template id="report-header-template">
+      <button class="report-header__tab tab__active" data-template="report-summary-template">Summary</button>
+      <button class="report-header__tab" data-template="report-ranking-template">Ranking</button>
+		</template>
+
+		<template id="report-summary-template">
 			<div class="report-content">
 				<div class="report-title">
 					<h3 class="report-title__text">Activity summary</h3>
@@ -132,7 +134,7 @@
 			</div>
 		</template>
 
-		<template id="report-ranking">
+		<template id="report-ranking-template">
 			<div class="report-content">
 				<div class="report-title">
 					<h3 class="report-title__text">Focus time this week</h3>
