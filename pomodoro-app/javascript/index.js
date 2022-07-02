@@ -75,4 +75,10 @@ const addRankingUsers = async () => {
 	}
 }
 
+const handleSettingsModal = evt => {
+	evt.preventDefault();
+	createModal();
+}
+
 reportButton.addEventListener('click', handleReportModal);
+settingsButton.addEventListener('click', handleSettingsModal);
