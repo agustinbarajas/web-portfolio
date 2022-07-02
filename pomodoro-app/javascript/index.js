@@ -1,50 +1,78 @@
-const modalTemplate = document.querySelector('#modal-template');
-const reportButton = document.getElementById('report-button');
 const reportSummaryTemplate = document.querySelector('#report-summary-template');
 const reportHeaderTemplate = document.querySelector('#report-header-template');
+const reportButton = document.getElementById('report-button');
+const settingsButton = document.getElementById('settings-button');
+let modalHeader;
+let modalBody;
 
-const handleModal = evt => {
+const handleReportModal = evt => {
 	evt.preventDefault();
+	createModal();
+
+	modalHeader.appendChild(reportHeaderTemplate.content.cloneNode(true));
+	modalBody.appendChild(reportSummaryTemplate.content.cloneNode(true));
+
+	addReportModalTabEventListener();
+}
+
+const createModal = () => {
+	let modalTemplate = document.querySelector('#modal-template');
 	document.body.appendChild(modalTemplate.content.cloneNode(true));
 	document.body.classList.add('overflow-hidden');
 
-	const closeModal = document.querySelector('.modal-close');
-	const modalBody = document.querySelector('.modal-body');
-	const modalHeader = document.querySelector('.modal-header');
+	initializeModalSections();
+	addCloseModalEventListener();
+}
 
-	modalBody.appendChild(reportSummaryTemplate.content.cloneNode(true));
-	modalHeader.appendChild(reportHeaderTemplate.content.cloneNode(true));
+const initializeModalSections = () => {
+	modalHeader = document.querySelector('.modal-header');
+	modalBody = document.querySelector('.modal-body');
+}
 
-  const modalTabButton = document.querySelectorAll('.report-header__tab');
+const addCloseModalEventListener = () => {
+	let closeModalButton;
 
 	const handleCloseModal = evt => {
 		evt.preventDefault();
 		document.body.removeChild(document.body.lastElementChild)
 		document.body.classList.remove('overflow-hidden');
 	};
+	closeModalButton = document.querySelector('.modal-close');
+	closeModalButton.addEventListener('click', handleCloseModal);
+}
 
-	const handleModalTab = async (evt) => {
+const addReportModalTabEventListener = () => {
+	const modalTabButton = document.querySelectorAll('.report-header__tab');
+
+	const handleModalTab = evt => {
 		evt.preventDefault();
 		document.querySelector('.report-header__tab.tab__active')
 			.classList.remove('tab__active');
 		evt.currentTarget.classList.add('tab__active');
-		const newTemplate = document.querySelector(`#${evt.currentTarget.dataset.template}`);
-		const oldTemplate = document.querySelector('.report-content');
 
-		if (oldTemplate) {
-			modalBody.replaceChild(newTemplate.content.cloneNode(true), oldTemplate);
-		}
-
-		const reportRankingBody = document.querySelector('#report-ranking-body');
-		if (reportRankingBody) {
-			const { data: { users } } = await get('assets/data/users.json');
-			const usersHtml = users.map(buildReportUserCard).join('');
-			reportRankingBody.innerHTML = usersHtml;
-		}
+		setReportModalTabTemplate(evt.currentTarget.dataset.template);
+		addRankingUsers();
 	};
 
-	closeModal.addEventListener('click', handleCloseModal);
 	modalTabButton.forEach(element => element.addEventListener('click', handleModalTab));
 }
 
-reportButton.addEventListener('click', handleModal);
+const setReportModalTabTemplate = (templateName) => {
+	const newTemplate = document.querySelector(`#${templateName}`);
+	const oldTemplate = document.querySelector('.report-content');
+
+	if (oldTemplate) {
+		modalBody.replaceChild(newTemplate.content.cloneNode(true), oldTemplate);
+	}
+}
+
+const addRankingUsers = async () => {
+	const reportRankingBody = document.querySelector('#report-ranking-body');
+	if (reportRankingBody) {
+		const { data: { users } } = await get('assets/data/users.json');
+		const usersHtml = users.map(buildReportUserCard).join('');
+		reportRankingBody.innerHTML = usersHtml;
+	}
+}
+
+reportButton.addEventListener('click', handleReportModal);
