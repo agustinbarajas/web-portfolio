@@ -1,2 +1,2 @@
-const MINUTES_PER_HOUR = 60;
-const MAX_MINUTES_DIGITS = 2;
+export const MINUTES_PER_HOUR = 60;
+export const MAX_MINUTES_DIGITS = 2;

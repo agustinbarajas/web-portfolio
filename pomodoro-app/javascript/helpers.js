@@ -1,3 +1,5 @@
+import { MAX_MINUTES_DIGITS, MINUTES_PER_HOUR } from './constants.js';
+
 function buildReportUserCard(user) {
 	return (`
 		<div class="report-user">
@@ -17,3 +19,5 @@ function parseTime(time) {
 
 	return `${hours}:${minutes}`;
 }
+
+export { buildReportUserCard, parseTime };

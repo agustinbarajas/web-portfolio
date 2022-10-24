@@ -1,3 +1,6 @@
+import { buildReportUserCard } from './helpers.js';
+import { get } from './api.js';
+
 const reportSummaryTemplate = document.querySelector('#report-summary-template');
 const reportHeaderTemplate = document.querySelector('#report-header-template');
 const reportButton = document.getElementById('report-button');
