@@ -4,7 +4,7 @@ function buildReportUserCard(user) {
 	return (`
 		<div class="report-user">
 			<label class="report-user-position">${user.position}</label>
-			<img class="report-user-image" src="${user.profile_picture}" />
+			<img class="report-user-image" src="${user.profile_picture}" alt="Show user profile image" />
 			<label class="report-user-name">${user.name}</label>
 			<label class="report-user-time">${parseTime(user.time)}</label>
 		</div>
