@@ -73,8 +73,7 @@ const addRankingUsers = async () => {
 	const reportRankingBody = document.querySelector('#report-ranking-body');
 	if (reportRankingBody) {
 		const { data: { users } } = await get('assets/data/users.json');
-		const usersHtml = users.map(buildReportUserCard).join('');
-		reportRankingBody.innerHTML = usersHtml;
+		reportRankingBody.innerHTML = users.map(buildReportUserCard).join('');
 	}
 }
 
